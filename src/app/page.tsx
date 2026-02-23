@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const heroSlides = [
   "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=1800&q=80",
@@ -419,17 +420,17 @@ export default function Home() {
             >
               <article className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-1">
                 <img
-                  src="https://images.unsplash.com/photo-1593702288056-fbfeb9e2f0f4?auto=format&fit=crop&w=900&q=80"
+                  src="/salon2.jpg"
                   alt="Barber grooming client"
-                  className="h-[360px] w-full object-cover sm:h-[320px]"
+                  className="h-[520px] w-full object-cover sm:h-[320px]"
                 />
               </article>
 
-              <article className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-1 lg:mt-20">
+              <article className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-1 lg:mt-16">
                 <img
                   src="https://images.unsplash.com/photo-1512690459411-b0fd1c86b8af?auto=format&fit=crop&w=900&q=80"
                   alt="Barber using dryer on client"
-                  className="h-[320px] w-full object-cover sm:h-[380px]"
+                  className="h-[320px] w-full object-cover sm:h-[360px]"
                 />
               </article>
 
@@ -445,11 +446,11 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=80"
                   alt="Beard trimming in barbershop"
-                  className="h-[360px] w-full object-cover sm:h-[300px]"
+                  className="h-[280px] w-full object-cover sm:h-[320px]"
                 />
               </article>
 
-              <article className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-1 lg:mt-6">
+              <article className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-1 lg:mt-12">
                 <img
                   src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=80"
                   alt="Barber preparing tools"
