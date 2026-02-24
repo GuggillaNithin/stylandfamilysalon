@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import VideoSection from "@/components/VideoSection";
+import Footer from "@/components/Footer";
 
 const heroSlides = [
   "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=1800&q=80",
@@ -171,7 +171,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-black/10" />
         <div className="absolute inset-0 bg-black/35" />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-between px-5 pb-10 pt-28 sm:px-8 sm:pt-32 lg:px-10 lg:pb-14 lg:pt-17">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1450px] flex-col justify-between px-4 pb-10 pt-28 sm:px-6 sm:pt-32 lg:px-8 lg:pb-14 lg:pt-17 2xl:px-10">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-black/40 px-2 py-1 text-xs font-medium text-white sm:text-sm">
               <span className="rounded-full bg-[#d4af37] px-2 py-1 text-black">-5% off</span>
@@ -248,10 +248,10 @@ export default function Home() {
 
       <section
         ref={galleryRef}
-        className="bg-zinc-100 py-12 text-black sm:px-8 md:py-20"
+        className="bg-zinc-100 py-12 text-black md:py-20"
       >
         <div className="w-full">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
             <span className="inline-flex items-center rounded-full bg-[#d4af37]/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#9a6b09]">
               Our Gallery
             </span>
@@ -262,7 +262,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-12 flex flex-col gap-6 md:flex-row md:justify-center md:gap-6 px-6 md:px-12">
+          <div className="mx-auto mt-12 flex w-full max-w-[1450px] flex-col gap-6 px-4 sm:px-6 md:flex-row md:justify-center md:gap-6 lg:px-8 2xl:px-10">
             <article
               className={`relative h-[280px] w-full max-w-[350px] overflow-hidden rounded-xl bg-zinc-200 shadow-lg transition-all duration-700 ease-out ${
                 isGalleryVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
@@ -320,9 +320,9 @@ export default function Home() {
 
       <section
           ref={servicesRef}
-            className="bg-[#ede9e5] px-5 py-20 text-black sm:px-8 md:py-28"
+            className="bg-[#ede9e5] px-4 py-20 text-black sm:px-6 md:py-28 lg:px-8 2xl:px-10"
           >
-        <div className="mx-auto w-full max-w-6xl lg:grid lg:grid-cols-[minmax(280px,460px)_1fr] lg:gap-18">
+        <div className="mx-auto w-full max-w-[1450px] lg:grid lg:grid-cols-[minmax(280px,460px)_1fr] lg:gap-18">
           <div className="self-start lg:sticky lg:top-24">
             <span className="inline-flex items-center rounded-full bg-[#d4af37]/35 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#9a6b09]">
               Our Expertise
@@ -367,9 +367,9 @@ export default function Home() {
 
       <section
         ref={testimonialRef}
-        className="relative bg-[#ede9e5] px-5 pb-20 pt-8 text-black sm:px-8 md:pb-24"
+        className="relative bg-[#ede9e5] px-4 pb-20 pt-8 text-black sm:px-6 md:pb-24 lg:px-8 2xl:px-10"
       >
-        <div className="mx-auto w-full max-w-6xl">
+        <div className="mx-auto w-full max-w-[1450px]">
           <div className="relative lg:min-h-[185vh]">
             <div
               className={`mx-auto max-w-3xl rounded-2xl px-4 py-6 text-center transition-all duration-700 ease-out lg:sticky lg:top-14 lg:z-10 lg:py-10 ${
@@ -473,8 +473,8 @@ export default function Home() {
 
       <VideoSection />
 
-      <section className="cta-shell px-4 pb-16 sm:px-8 md:pb-20">
-        <div className="cta-card mx-auto w-full max-w-6xl">
+      <section className="cta-shell px-4 pb-16 sm:px-6 md:pb-20 lg:px-8 2xl:px-10 pt-20">
+        <div className="cta-card mx-auto w-full max-w-[1450px]">
           <div className="cta-noise" aria-hidden />
           <div className="cta-content">
             <span className="cta-kicker">
@@ -506,6 +506,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

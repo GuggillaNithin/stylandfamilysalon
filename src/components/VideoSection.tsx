@@ -29,8 +29,8 @@ function useIsDesktop() {
 
 function MobileVideo() {
   return (
-    <section className="relative w-full bg-[#ede9e5] px-4 py-12 sm:px-8 md:py-16">
-      <div className="mx-auto w-full max-w-6xl">
+    <section className="relative w-full bg-[#ede9e5] px-4 py-12 sm:px-6 md:py-16 lg:px-8 2xl:px-10">
+      <div className="mx-auto w-full max-w-[1450px]">
         <div className="aspect-video w-full overflow-hidden rounded-xl">
           <video
             className="h-full w-full object-cover"
@@ -60,8 +60,8 @@ function DesktopAnimatedVideo() {
     return 1 - Math.pow(1 - clamped, 3);
   });
 
-  const scale = useTransform(easedProgress, [0, 1], [0.6, 1]);
-  const y = useTransform(easedProgress, [0, 1], [100, 0]);
+  const scale = useTransform(easedProgress, [0, 1], [0.85, 1]);
+  const y = useTransform(easedProgress, [0, 1], [60, 0]);
   const opacity = useTransform(easedProgress, [0, 1], [0.8, 1]);
   const borderRadius = useTransform(easedProgress, [0, 1], [20, 0]);
   const blur = useTransform(easedProgress, [0, 1], [8, 0]);
@@ -72,22 +72,23 @@ function DesktopAnimatedVideo() {
       ref={sectionRef}
       className="relative min-h-[150vh] w-full overflow-x-clip bg-[#ede9e5]"
     >
-      <div className="sticky top-0 flex h-screen items-center justify-center px-4 sm:px-8">
+      <div className="sticky top-0 flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8 2xl:px-10">
         <motion.div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 bg-black/20"
           style={{ backdropFilter, WebkitBackdropFilter: backdropFilter }}
         />
 
-        <motion.div
-          className="relative aspect-video w-full max-w-[1450px] overflow-hidden shadow-2xl will-change-transform"
-          style={{
-            scale,
-            y,
-            opacity,
-            borderRadius,
-            transformOrigin: "center center",
-          }}
+        <div className="w-full max-w-[1450px] overflow-hidden">
+      <motion.div
+        className="relative aspect-video w-full shadow-2xl will-change-transform"
+        style={{
+        scale,
+        y,
+        opacity,
+        borderRadius,
+        transformOrigin: "center center",
+      }}
         >
           <video
             className="h-full w-full object-cover"
@@ -99,6 +100,7 @@ function DesktopAnimatedVideo() {
             preload="metadata"
           />
         </motion.div>
+        </div>
       </div>
     </section>
   );

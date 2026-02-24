@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-[1000] bg-black/70 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <div className="mx-auto flex w-full max-w-[1450px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8 2xl:px-10">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
