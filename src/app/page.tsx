@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import VideoSection from "@/components/VideoSection";
 
 const heroSlides = [
   "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=1800&q=80",
@@ -177,12 +178,12 @@ export default function Home() {
               <span>For your very first visit</span>
             </div>
 
-            <h1 className="mt-6 text-xl font-extrabold leading-tight sm:text-5xl lg:text-7xl">
-              Look Good,
+            <h1 className="mt-6 text-xl font-extrabold leading-tight sm:text-5xl lg:text-7xl text-white">
+              <span className="text-[#ffffff]">Look Good,</span>
               <br />
               <span className="text-[#d4af37]">Feel Confident,</span>
               <br />
-              Shine Everyday
+              <span className="text-[#ffffff]">Shine Everyday,</span>
             </h1>
             <p>Feeling so good</p>
 
@@ -428,7 +429,7 @@ export default function Home() {
 
               <article className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:-translate-y-1 lg:mt-16">
                 <img
-                  src="https://images.unsplash.com/photo-1512690459411-b0fd1c86b8af?auto=format&fit=crop&w=900&q=80"
+                  src="/salon2.jpg"
                   alt="Barber using dryer on client"
                   className="h-[320px] w-full object-cover sm:h-[360px]"
                 />
@@ -466,6 +467,42 @@ export default function Home() {
                 />
               </article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <VideoSection />
+
+      <section className="cta-shell px-4 pb-16 sm:px-8 md:pb-20">
+        <div className="cta-card mx-auto w-full max-w-6xl">
+          <div className="cta-noise" aria-hidden />
+          <div className="cta-content">
+            <span className="cta-kicker">
+              <span className="cta-dot" aria-hidden />
+              Call To Action
+            </span>
+
+            <h2 className="cta-title">Book your spot today &amp; step out looking your best.</h2>
+
+            <div className="cta-actions">
+              <a href="tel:+12124567899" className="cta-btn cta-btn-primary">
+                Book Your Slot
+              </a>
+              <a href="mailto:info@saloni.com" className="cta-btn cta-btn-secondary">
+                Info@Saloni.Com
+              </a>
+            </div>
+
+            <p className="cta-meta">
+              Book your slot through{" "}
+              <a href="#" className="cta-inline-link">
+                Google Calendar
+              </a>{" "}
+              or{" "}
+              <a href="#" className="cta-inline-link">
+                Apple Calendar
+              </a>
+            </p>
           </div>
         </div>
       </section>
